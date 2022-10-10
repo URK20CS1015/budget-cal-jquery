@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('#b1').click(function(){
+            let tot =parseInt($('#num').val());
+            let num1 =parseInt($('#n1').val());
+            let num2 =parseInt($('#n2').val());
+            let num3 =parseInt($('#n3').val());
+            let num4 =parseInt($('#n4').val());
+            let r1 = tot * num1/100;
+            $('.d1').html("Room Rent "+r1);
+            let r2 = tot * num2/100;
+            $('.d2').html("Accessories "+r2);
+            let r3 = tot * num3/100;
+            $('.d3').html("Emergencies "+r3);
+            let r4 = tot * num4/100;
+            $('.d4').html("Savings "+r4);
+            
+        })
+    })
+</script>
+</head>
+<body>
+    <div style="background-color:black; color:white;font-size:30px;text-align:center;">
+        Budget Calculator App</div><br>
+        <p style="font-size:25px;text-align:center"><b>Enter Amount That You Want To Manage</b></p><br>
+        <input type="number" id="num" style="margin-left:42%;text-align: center;height:40px" placeholder="e.g:3000"><br>
+        <p style="font-size:25px;text-align:center"><b>How Would You Like To Divide Your Money?</b></p><br>
+        <div style="margin-left:5%">
+            <b>Room Rent(%):</b><input type="number" id="n1" style="text-align: center;height:40px" placeholder="e.g:3000">&nbsp;&nbsp;&nbsp;
+            <b>Accessories(%):</b><input type="number" id="n2" style="text-align: center;height:40px" placeholder="e.g:3000">&nbsp;&nbsp;&nbsp;
+            <b>Emergency(%):</b><input type="number" id="n3" style="text-align: center;height:40px" placeholder="e.g:3000">&nbsp;&nbsp;&nbsp;&nbsp;
+            <b>Saving(%):</b><input type="number" id="n4" style="text-align: center;height:40px" placeholder="e.g:3000">
+        </div>
+        <br>
+        <button id="b1" style="border:1px solid rgb(40, 40, 86);background-color:rgb(40, 40, 86);font-size:20px;color:white;text-align:center;height:50px;margin-left:41%">
+            Evaluate My Money</button>
+            <br><br><br>
+            <div id="box" style="margin-left:5%">
+            <div class="d1"style="margin-left: 15%;float: left;;width:100px;height:70px;border:1px solid blue; background-color:blue;color:white;text-align:center"></div>
+            <div class="d2"style="margin-left: 10%;float: left;width:100px;height:70px;border:1px solid green; background-color:green;color:white;text-align:center"></div>
+            <div class="d3"style="margin-left: 10%;float: left;width:100px;height:70px;border:1px solid yellow; background-color:yellow;color:black;text-align:center"></div>
+            <div class="d4"style="margin-left: 10%;float: left;width:100px;height:70px;border:1px solid pink; background-color:pink;color:black;text-align:center"></div>
+            </div>
+        
+
+    </body>
+</html>
